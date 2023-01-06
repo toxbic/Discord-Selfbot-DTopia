@@ -237,7 +237,7 @@ class Client:
             cmd[f'{self.prefix}{func.__name__}'] = func
 
     def run(self):
-         #print(fc)
+         
          asyncio.run(_f(self)) 
                 
     
