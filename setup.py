@@ -14,7 +14,6 @@ setup(
     ],
     entry_points={
         'egg_info.writers': [
-            'dtopia.egg_info',
+            'dtopia.egg_info = dtopia.client:Idk',
         ],
-    },
-)
+    },)
