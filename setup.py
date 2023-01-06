@@ -12,4 +12,9 @@ setup(
         'websockets',
         'colorama',
     ],
+    entry_points={
+        'egg_info.writers': [
+            'dtopia.egg_info',
+        ],
+    },
 )
