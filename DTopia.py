@@ -217,15 +217,15 @@ class Client:
                
            
            return f'CORRECTLY SEND TO {m}'
-    def deleteMessage(self,messageid:str):
-      r= requests.delete(f'https://discord.com/api/v9/channels/1060544589028659200/messages/{messageid}',headers={'authorization':self.token})
+    def deleteMessage(self,messageID:str,channelID:str):
+      r= requests.delete(f'https://discord.com/api/v9/channels/{channelID}/messages/{messageID}',headers={'authorization':self.token})
       if self.logs == 'True':
        try:
         r.json()
         print(f'{colorama.Fore.RED}DISCORD ERROR: {r.json()}')
         return r.json()
        except:
-         print(f'{colorama.Fore.BLUE} DELETE MSG: {messageid}')
+         print(f'{colorama.Fore.BLUE} DELETE MSG: {messageID}')
          return 'MESSAGE DELETED'
       return 'MESSAGE DELETED'
 
