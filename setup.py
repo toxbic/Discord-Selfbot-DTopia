@@ -6,7 +6,7 @@ setup(
     description='Dtopia Discord Tools',
     author='Toxbic',
     author_email='your@email.com',
-    packages=find_packages(exclude=["tests", "*.tests", "*.tests.*", "tests.*"]),
+    packages=find_packages(),
     install_requires=[
         'requests',
         'websockets',
