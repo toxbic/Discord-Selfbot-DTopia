@@ -1,7 +1,7 @@
 # DTopia - Discord-Tools
 Discord Tools - SelfBot - Open Source - Free
 
-
+**If it doesnt work you might be ratelimited**
 
 
 ## Installing
