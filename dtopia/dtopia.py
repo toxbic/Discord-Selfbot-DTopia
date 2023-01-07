@@ -233,6 +233,12 @@ class Client:
 
           
     def event(self,func):
+      for x in cmd:
+              
+             
+       if str(x) == f'{self.prefix}{func.__name__}':
+                print('NO 2 SAME FUNCTIONS AT A TIME')
+                exit()
       fc[func.__name__] = func
     def command(self,func):
             
