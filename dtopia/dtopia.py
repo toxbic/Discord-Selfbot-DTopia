@@ -1,4 +1,3 @@
-
 import requests
 import time
 import colorama
@@ -6,7 +5,6 @@ import asyncio
 import threading
 import websockets
 import json
-from dtopia_helper.msgdata import msg
 
 
 
@@ -16,6 +14,12 @@ fc = {}
 cmd = {}
 
 
+class msg:
+  def __init__(self, data):
+    
+  
+    self.user = f"{data['d']['author']['username']}#{data['d']['author']['discriminator']}"
+    
 async def _f(self):
      url = f"wss://gateway.discord.gg/?v=6&encoding=json&token={self.token}"
      async with websockets.connect(url) as websocket:
@@ -235,6 +239,13 @@ class Client:
     def event(self,func):
       fc[func.__name__] = func
     def command(self,func):
+            
+            for x in cmd:
+              
+             
+              if str(x) == f'{self.prefix}{func.__name__}':
+                print('NO 2 SAME FUNCTIONS AT A TIME')
+                exit()
             cmd[f'{self.prefix}{func.__name__}'] = func
 
     def run(self):
