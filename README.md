@@ -32,7 +32,7 @@ bot = dtopia.Client(token="TOKEN",prefix='!')
 
 @bot.event
 def on_message(data):
- print(data)
+ print(data['d']['content'])
  
 bot.run()
 ```
