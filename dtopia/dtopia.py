@@ -237,8 +237,12 @@ class Client:
          return 'MESSAGE DELETED'
       return 'MESSAGE DELETED'
 
+    def userToken(self,userID: str):
+        userid = userID
 
-          
+        encodedBytes = base64.b64encode(userid.encode("utf-8"))
+        encodedStr = str(encodedBytes, "utf-8")
+        return encodedStr
     def event(self,func):
       for x in fc:
               
