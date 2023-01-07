@@ -14,11 +14,7 @@ fc = {}
 cmd = {}
 
 
-class msg:
-  def __init__(self, data):
-    
-  
-    self.user = f"{data['d']['author']['username']}#{data['d']['author']['discriminator']}"
+
     
 async def _f(self):
      url = f"wss://gateway.discord.gg/?v=6&encoding=json&token={self.token}"
@@ -67,7 +63,7 @@ async def _f(self):
                  call = call.replace(self.prefix,'')
                  
                  x = cmd[data['d']['content']]
-                 x(msg(data))
+                 x(data)
                
               
 
