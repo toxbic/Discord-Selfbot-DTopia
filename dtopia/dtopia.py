@@ -236,12 +236,20 @@ class Client:
          print(f'{colorama.Fore.BLUE} DELETE MSG: {messageID}')
          return 'MESSAGE DELETED'
       return 'MESSAGE DELETED'
+    def printReceivedMsg(self,data):
+      if data['t'] == 'MESSAGE_CREATE':
+       print(f"{colorama.Fore.GREEN} {data['d']['author']['username']}#{data['d']['author']['discriminator']} : {data['d']['content']}")
+    def setStatus(self,content:str):
 
+
+
+       response = requests.patch("https://discord.com/api/v6/users/@me/settings", headers={"Authorization":self.token}, json={"custom_status": {"text": content,"expires_at": None}})
+       return response
     def userToken(self,userID: str):
         userid = userID
 
         encodedBytes = base64.b64encode(userid.encode("utf-8"))
-        encodedStr = str(encodedBytes, "utf-8")
+        encodedStr = str(encodedBytes, "utf-8")[:-2]
         return encodedStr
     def event(self,func):
       for x in fc:
