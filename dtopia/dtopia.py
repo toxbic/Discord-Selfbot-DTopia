@@ -57,8 +57,12 @@ async def _f(self):
                 
                 fu(data)
               if 'on_dm' in fc:
-                fu = fc['on_dm']
-                fu(data)
+                  guild = data.get('d').get('guild_id')
+  
+                  if guild is None:
+    
+                    fu = fc['on_dm']
+                    fu(data)
               if str(data['d']['content']) in cmd:
                  call = str(data['d']['content'])
                  #print(prf)
