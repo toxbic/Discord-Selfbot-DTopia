@@ -1,0 +1,78 @@
+emojis = [
+    "💀",  # Skull
+    "☠️",  # Skull and Crossbones
+    "💩",  # Pile of Poo
+    "🤡",  # Clown Face
+    "👺",  # Japanese Ogre
+    "👹",  # Japanese Goblin
+    "👻",  # Ghost
+    "👽",  # Alien
+    "👾",  # Alien Monster
+    "🤖",  # Robot Face
+    "💊",  # Pill
+    "💉",  # Syringe
+    "💰",  # Money Bag
+    "💳",  # Credit Card
+    "💎",  # Gem Stone
+    "🔪",  # Hocho
+    "🔫",  # Pistol
+    "🏹",  # Bow and Arrow
+    "🗡️",  # Dagger
+    "⚰️",  # Coffin
+    "⚱️",  # Funeral Urn]
+
+emojis = [
+    "😂",  # Face with Tears of Joy
+    "🤣",  # Rolling on the Floor Laughing
+    "😜",  # Face with Tongue
+    "😎",  # Sunglasses Face
+    "😆",  # Grinning Face with Closed Eyes
+    "😜",  # Winking Face with Tongue
+    "😛",  # Face with Tongue Sticking Out
+    "😝",  # Squinting Face with Tongue
+    "😜",  # Face with Stuck-Out Tongue and Winking Eye
+    "😹",  # Cat Face with Tears of Joy
+    "😻",  # Smiling Cat Face with Heart-Eyes
+    "😽",  # Kissing Cat Face
+    "🙀",  # Weary Cat Face
+    "😿",  # Crying Cat Face
+    "🐱",  # Cat
+    "🐈",  # Cat Face
+    "🦁",  # Lion Face
+    "🐯",  # Tiger Face
+    "🐅",  # Tiger
+    "🐆",  # Leopard
+    "🐴",  # Horse Face
+    "🐎",  # Horse
+    "🦄",  # Unicorn Face
+    "🦓",  # Zebra
+    "🦌",  # Deer
+    "🐮",  # Cow Face
+    "🐂",  # Ox
+    "🐃",  # Water Buffalo
+    "🐄",  # Cow
+    "🐷",  # Pig Face
+    "🐖",  # Pig
+    "🐗",  # Boar
+    "🐽",  # Pig Nose
+    "🐏",  # Ram
+    "🐑",  # Ewe
+    "🐐",  # Goat
+    "🐪",  # Dromedary Camel
+    "🐫",  # Bactrian Camel
+    "🦙",  # Llama
+    "🦒",  # Giraffe
+    "🐘",  # Elephant
+    "🦏",  # Rhinoceros
+    "🐍",  # Snake
+    "🐲",  # Dragon Face
+    "🐉",  # Dragon
+    "🦕",  # Sauropod
+    "🦖",  # T-Rex
+    "🐳",  # Spouting Whale
+    "🐋",  # Whale
+    "🐬",  # Dolphin
+    "🐟",  # Fish
+    "🐠",  # Tropical Fish
+    "🐡",  # Blowfish
+]
