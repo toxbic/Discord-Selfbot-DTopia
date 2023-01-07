@@ -2,4 +2,5 @@
 Discord Tools - Open Source - Free
 
 Install Windows:
-'pip install dtopia'
+```python
+pip install dtopia```
