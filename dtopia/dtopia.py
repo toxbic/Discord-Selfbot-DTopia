@@ -39,7 +39,7 @@ async def _f(self):
         # Wait for the hello event
         data = await websocket.recv()
         data = json.loads(data)
-        print('r')
+       
 
         # Start a loop to listen for events
         while True:
