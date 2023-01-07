@@ -28,5 +28,11 @@ bot.run()
 ```python
 import dtopia
 
+bot = dtopia.Client(token="TOKEN",prefix='!')
 
+@bot.event
+def on_message(data):
+ print(data)
+ 
+bot.run()
 ```
