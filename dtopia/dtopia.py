@@ -153,16 +153,17 @@ class Client:
            url = 'https://discord.com/api/guilds/' + copiedID + '/channels'
            headers = {"Authorization": self.token}
            response = requests.get(url, headers=headers)
-          
-           m = response.json().get('message')
-           if m == 'Missing Access':
-             if self.logs == True:
+           try:
+            m = response.json().get('message')
+            if m == 'Missing Access':
+              if self.logs == True:
                print(f'{colorama.Fore.RED}DISCORD ERROR: Missing Access ( Check if your in that server )')
-             return response.json()
-           r = response.json()
-           cat = {}
-           d1 = {}
-           for x in r:
+              return response.json()
+           except:
+            r = response.json()
+            cat = {}
+            d1 = {}
+            for x in r:
              time.sleep(1)
              naam = x['name']
              pr = x['permission_overwrites']
@@ -178,7 +179,7 @@ class Client:
                cat[x['id']] = x
             
                
-           for x in cat:
+            for x in cat:
              time.sleep(1)
              if self.logs == True:
               print(f'{colorama.Fore.GREEN}     COPIED {cat[x]["name"]}{colorama.Fore.WHITE}')
