@@ -17,11 +17,16 @@ import dtopia
 bot = dtopia.Client(token="TOKEN",prefix='!')
 
 @bot.command
-def help(data):
+def hey(data):
   channel = data['d']['channel_id']
-  bot.sendMessage('How what',channel)
+  bot.sendMessage('Hey',channel)
 
 bot.run()
 
 ```
+## Example Selfbot Event
+```python
+import dtopia
 
+
+```
