@@ -14,13 +14,14 @@ pip install dtopia
 ```python
 import dtopia
 
-bot = dtopia.Client(token='Your token',prefix='!')
+bot = dtopia.Client(token=TOKEN",prefix='!')
 
 @bot.command
 def help(data):
- print(data)
- 
- bot.run()
+  channel = data['d']['channel_id']
+  bot.sendMessage('How what',channel)
+
+bot.run()
 
 ```
 
