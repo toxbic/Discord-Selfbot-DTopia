@@ -10,11 +10,11 @@ Install Windows:
 pip install dtopia
 ```
 
-## Example
+## Example Selfbot Command
 ```python
 import dtopia
 
-bot = dtopia.Client(token=TOKEN",prefix='!')
+bot = dtopia.Client(token="TOKEN",prefix='!')
 
 @bot.command
 def help(data):
