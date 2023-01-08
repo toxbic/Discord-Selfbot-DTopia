@@ -310,9 +310,9 @@ class Client:
        r = response.json()
        if self.logs == True:
             if r.get('id') != None:
-             print(f'{colorama.Fore.GREEN}'CREATED DM WITH {userID}')
+             print(f'{colorama.Fore.GREEN}CREATED DM WITH {userID}')
             else:
-                      print(f'{colorama.Fore.RED}'COUDLNT CREATE DM WITH {userID}')
+                      print(f'{colorama.Fore.RED}COUDLNT CREATE DM WITH {userID}')
        return response
     def event(self,func):
       for x in fc:
