@@ -8,6 +8,7 @@ Discord Tools - SelfBot - Open Source - Free
 - [x] Spam Reactions
 - [x] Send Message to All Dms
 - [x] Get all Servers
+- [x] Message Flood Servers
 - [ ] Copy Server Roles
 
 
