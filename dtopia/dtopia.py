@@ -15,7 +15,6 @@ cmd = {}
 
 
 
-    
 async def _f(self):
      url = f"wss://gateway.discord.gg/?v=6&encoding=json&token={self.token}"
      async with websockets.connect(url) as websocket:
@@ -51,18 +50,19 @@ async def _f(self):
             #if data["t"] == "MESSAGE_CREATE":
                 #message = data["d"]
             #func(data)
+           
             if data['t'] == 'MESSAGE_CREATE':
               if 'on_message' in fc:
                 fu = fc['on_message']
                 
-                fu(data)
+                fu(data['d'])
               if 'on_dm' in fc:
                   guild = data.get('d').get('guild_id')
   
                   if guild is None:
     
                     fu = fc['on_dm']
-                    fu(data)
+                    fu(data['d'])
               if str(data['d']['content']) in cmd:
                  call = str(data['d']['content'])
                  #print(prf)
@@ -70,7 +70,7 @@ async def _f(self):
                  call = call.replace(self.prefix,'')
                  
                  x = cmd[data['d']['content']]
-                 x(data)
+                 x(data['d'])
                
               
 
@@ -115,7 +115,10 @@ class Client:
        val = response.json().get('message')
        if val == 'Cannot send messages to this user':
         return 'Cannot send messages to this user'
-       print(f'{colorama.Fore.GREEN}SEND MSG TO {response.json()["channel_id"]}{colorama.Fore.WHITE}')
+       if val == 'Cannot send messages in a non-text channel':
+         return 'Cannot send messages in a non-text channel'
+       
+       print(f'{colorama.Fore.GREEN}SEND TO {response.json()["channel_id"]}{colorama.Fore.WHITE}')
     
      return response
 
@@ -238,8 +241,9 @@ class Client:
          return 'MESSAGE DELETED'
       return 'MESSAGE DELETED'
     def printReceivedMsg(self,data):
-      if data['t'] == 'MESSAGE_CREATE':
-       print(f"{colorama.Fore.GREEN} {data['d']['author']['username']}#{data['d']['author']['discriminator']} : {data['d']['content']}")
+      
+      
+       print(f"{colorama.Fore.GREEN} {data['author']['username']}#{data['author']['discriminator']} : {data['content']}")
     def setStatus(self,content:str):
 
 
@@ -314,6 +318,38 @@ class Client:
             else:
                       print(f'{colorama.Fore.RED}COUDLNT CREATE DM WITH {userID}')
        return response
+    def getChannels(self,guildID):
+           url = 'https://discord.com/api/guilds/' + guildID+ '/channels'
+           headers = {"Authorization": self.token}
+           response = requests.get(url, headers=headers)
+           if self.logs == True:
+            print(f'{colorama.Fore.BLUE}FOUND {len(response.json())} CHANNELS{colorama.Fore.WHITE}')
+            for x in response.json():
+             print(f'  {colorama.Fore.GREEN}FOUND: {x["name"]}{colorama.Fore.WHITE}') 
+           return response
+    def floodServer(self,content,guildID,msgPerChannel:int,interval:int = None):
+
+
+         response = requests.get('https://discord.com/api/guilds/' + guildID+ '/channels', headers={"Authorization": self.token})
+         newr = {}
+         v1 = 0
+         for x in response.json():
+           if x['type'] != 4:
+             newr[x['id']] = x['id']
+         a = len(newr)
+         for z in newr:
+          for i in range(msgPerChannel):
+           if interval == None:
+            time.sleep(1)
+           else:
+            time.sleep(interval)
+           response = requests.post('https://discord.com/api/channels/' + str(newr[z]) + '/messages', headers={"Authorization": self.token}, json={"content": content})
+           x = response.json().get('id')
+           if x != None:
+            v1 +=1
+            print(f'{colorama.Fore.GREEN}SEND TO {colorama.Fore.BLUE}{newr[z]}   {colorama.Fore.GREEN}AMOUNT: {v1}/{a*msgPerChannel}')
+                     
+
     def event(self,func):
       for x in fc:
               
