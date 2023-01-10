@@ -155,7 +155,11 @@ class Client:
     def copyServer(self, copiedID,pastedID):
            url = 'https://discord.com/api/guilds/' + copiedID + '/channels'
            headers = {"Authorization": self.token}
+           anewurl = f"https://discord.com/api/guilds/{copiedID}/roles"
+           response1 = requests.get(anewurl, headers=headers)
            response = requests.get(url, headers=headers)
+           x = len(response.json()) + len(response1.json())
+           print(f"{colorama.Fore.CYAN}THIS WILL TAKE UPTO {round(x/60,2)} Minutes")
            try:
             m = response.json().get('message')
             if m == 'Missing Access':
@@ -177,7 +181,7 @@ class Client:
                #print(naam)
                  d1[x['id']] = r.json()['id']
                  if self.logs == True:
-                   print(f'{colorama.Fore.BLUE} COPIED {naam}{colorama.Fore.WHITE}')
+                   print(f'{colorama.Fore.BLUE} COPIED CATEGORY: {naam}{colorama.Fore.WHITE}')
              else:
                cat[x['id']] = x
             
@@ -185,11 +189,35 @@ class Client:
             for x in cat:
              time.sleep(1)
              if self.logs == True:
-              print(f'{colorama.Fore.GREEN}     COPIED {cat[x]["name"]}{colorama.Fore.WHITE}')
+              print(f'{colorama.Fore.GREEN}     COPIED CHANNEL: {cat[x]["name"]}{colorama.Fore.WHITE}')
              if cat[x]['parent_id'] == None:
                              r = requests.post(f'https://discord.com/api/v9/guilds/{pastedID}/channels',headers=headers,json={"type": cat[x]['type'],"name": cat[x]['name'],"permission_overwrites": cat[x]['permission_overwrites'],'position':cat[x]['position']})    
              else:
-                             r = requests.post(f'https://discord.com/api/v9/guilds/{pastedID}/channels',headers=headers,json={"type": cat[x]['type'],"name": cat[x]['name'],"permission_overwrites": cat[x]['permission_overwrites'],'position':cat[x]['position'],'parent_id':d1[cat[x]['parent_id']]})                  
+                             r = requests.post(f'https://discord.com/api/v9/guilds/{pastedID}/channels',headers=headers,json={"type": cat[x]['type'],"name": cat[x]['name'],"permission_overwrites": cat[x]['permission_overwrites'],'position':cat[x]['position'],'parent_id':d1[cat[x]['parent_id']]})   
+            url = f"https://discord.com/api/guilds/{copiedID}/roles"
+            r = requests.get(url,headers={'authorization':self.token})
+            for x in r.json():
+             try:
+              time.sleep(1)
+              name = x['name']
+              permsnew = x['permissions_new']
+              perms = x['permissions']
+              hoist = x['hoist']
+              position = x['position']
+              desc = x['description']
+              mentionable = x['mentionable']
+              color = x['color']
+              newurl = f'https://discord.com/api/v9/guilds/{pastedID}/roles'
+              re = requests.post(newurl,headers={'authorization':self.token},json={'name':name,'description':desc,'position':position,'permissions_new':permsnew,'hoist':hoist,'mentionable':mentionable,'color':color})
+              x = re.json().get('id')
+              if x != None:
+                  print(f'{colorama.Fore.BLUE}           COPIED ROLE: {name}{colorama.Fore.WHITE}')
+             except:
+               pass
+
+
+
+                
     def dmAll(self,content, logusername: 'True or False' = None):
            if content == '':
              lgerror(self,f'{colorama.Fore.RED}DISCORD ERROR: Empty Message')
