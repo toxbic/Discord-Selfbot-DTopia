@@ -4,12 +4,12 @@ Discord Tools - SelfBot - Open Source - Free
 **If it doesnt work you might be ratelimited**
 
 ## Features
-- [x] Copy Server Channels
+- [x] Copy Server Channels/Roles
 - [x] Spam Reactions
 - [x] Send Message to All Dms
 - [x] Get all Servers
 - [x] Message Flood Servers
-- [ ] Copy Server Roles
+
 
 
 ## Installing
