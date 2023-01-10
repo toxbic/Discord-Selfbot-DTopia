@@ -348,6 +348,8 @@ class Client:
            if x != None:
             v1 +=1
             print(f'{colorama.Fore.GREEN}SEND TO {colorama.Fore.BLUE}{newr[z]}   {colorama.Fore.GREEN}AMOUNT: {v1}/{a*msgPerChannel}')
+           else:
+             break
                      
 
     def event(self,func):
