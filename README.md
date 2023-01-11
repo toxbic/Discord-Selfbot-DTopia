@@ -9,7 +9,6 @@
 ```        
 Discord Tools - SelfBot - Open Source - Free
 
-**If it doesnt work you might be ratelimited**
 
 ## Features
 - [x] Copy Server Channels/Roles
@@ -25,6 +24,7 @@ Install Windows:
 ```python
 pip install dtopia
 ```
+**If it doesnt work you might be ratelimited**
 
 ## Example Selfbot Command
 ```python
