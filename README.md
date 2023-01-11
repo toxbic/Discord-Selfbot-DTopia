@@ -7,7 +7,7 @@
                |_|            
 
 ```        
-# Discord Tools - SelfBot - Open Source - Free
+# Discord - SelfBot - Open Source - Free
 
 
 ## Features
