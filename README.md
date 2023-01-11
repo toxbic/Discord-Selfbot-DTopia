@@ -7,7 +7,7 @@
                |_|            
 
 ```        
-# Discord - SelfBot - Open Source - Free
+# Discord Selfbot - DTopia 
 
 
 ## Features
