@@ -6,7 +6,8 @@
 |____/ |_|\___/| .__/|_|\__,_|
                |_|            
 
-```        
+```       
+<img src="https://discord.com/api/guilds/1065340995136389212/widget.json"></img>
 # Discord Selfbot - DTopia 
 
 ## Features
