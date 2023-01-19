@@ -12,22 +12,12 @@
 <h4 align="center">Music, Moderation, Trivia, Stream Alerts and Fully Modular.</h4>
 
 <p align="center">
-  <a href="https://discord.gg/red">
+  <a href="https://discord.gg/SbucxwJSuA">
     <img src="https://discordapp.com/api/guilds/1065340995136389212/widget.png?style=shield" alt="Discord Server">
   </a>
-  <a href="https://pypi.org/project/Red-DiscordBot/">
+  <a href="https://pypi.org/project/dtopia/">
      <img alt="PyPI" src="https://img.shields.io/pypi/v/Red-Discordbot">
-  </a>
-  <a href="https://www.python.org/downloads/">
-    <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/Red-Discordbot">
-  </a>
-  <a href="https://github.com/Rapptz/discord.py/">
-     <img src="https://img.shields.io/badge/discord-py-blue.svg" alt="discord.py">
-  </a>
-  <a href="https://www.patreon.com/Red_Devs">
-    <img src="https://img.shields.io/badge/Support-Red!-red.svg" alt="Support Red on Patreon!">
-  </a>
-
+  </a></p>
 
 
 
