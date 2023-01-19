@@ -14,9 +14,6 @@
 <p align="center">
   <a href="https://discord.gg/SbucxwJSuA">
     <img src="https://discordapp.com/api/guilds/1065340995136389212/widget.png?style=shield" alt="Discord Server">
-  </a>
-  <a href="https://pypi.org/project/dtopia/">
-     <img alt="PyPI" src="https://img.shields.io/pypi/v/Red-Discordbot">
   </a></p>
 
 
