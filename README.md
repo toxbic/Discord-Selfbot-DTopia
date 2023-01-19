@@ -7,9 +7,7 @@
                |_|            
 
 ```       
-<a href="https://discord.com/invite/yourinvitelink">
-  <img src="https://images-ext-2.discordapp.net/external/KXh3VWo6OpBvuYwrbqxlgjW4sQDMZ-rPD1Qcoa2unP4/https/media.tenor.com/W3hULqFhYs0AAAPo/goku.mp4" alt="Join My Discord">
-</a>
+
 
 ## Features
 - [x] Copy Server Channels/Roles
