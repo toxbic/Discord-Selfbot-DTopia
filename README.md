@@ -11,7 +11,7 @@
 
 <h4 align="center">Music, Moderation, Trivia, Stream Alerts and Fully Modular.</h4>
 
-<p align="center">
+<p align="right">
   <a href="https://discord.gg/SbucxwJSuA">
     <img src="https://discordapp.com/api/guilds/1065340995136389212/widget.png?style=shield" alt="Discord Server">
   </a></p>
