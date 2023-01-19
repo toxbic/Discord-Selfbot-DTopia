@@ -8,7 +8,7 @@
 
 ```        
 # Discord Selfbot - DTopia 
-
+<a href="https://discord.gg/SbucxwJSuA">Discord</a>
 
 ## Features
 - [x] Copy Server Channels/Roles
