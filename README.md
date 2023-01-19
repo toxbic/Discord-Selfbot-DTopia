@@ -9,7 +9,7 @@
 ```       
 <p align="center">
   <a href=" https://discord.gg/r3sSKJJ">
-    <img src=" https://discord.com/api/guilds/336642139381301249/embed.png" alt="Discord Server">
+    <img src=" https://discord.com/api/guilds/1065340995136389212/widget.json" alt="Discord Server">
   </a>
 </p>
 
