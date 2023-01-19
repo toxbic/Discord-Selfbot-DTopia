@@ -8,8 +8,8 @@
 
 ```       
 <p align="center">
-  <a href="https://discord.gg/red">
-    <img src="https://discord.com/api/guilds/1065340995136389212/widget.png?style=shield" alt="Discord Server">
+  <a href=" https://discord.gg/r3sSKJJ">
+    <img src=" https://discord.com/api/guilds/336642139381301249/embed.png" alt="Discord Server">
   </a>
 </p>
 
