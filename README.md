@@ -8,8 +8,7 @@
 
 ```        
 # Discord Selfbot - DTopia 
-<a href="https://discord.gg/SbucxwJSuA"><button style="background-color:grey;color:yellow;">Discord Server</button></a>
-<button style="background-color:grey;color:yellow;">Discord Server</button>
+
 ## Features
 - [x] Copy Server Channels/Roles
 - [x] Spam Reactions
