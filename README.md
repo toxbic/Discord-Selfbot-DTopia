@@ -18,7 +18,7 @@
 
 
 
-## Features
+<h1>## Features</h1>
 - [x] Copy Server Channels/Roles
 - [x] Spam Reactions
 - [x] Send Message to All Dms
