@@ -9,9 +9,9 @@
 ```       
 
 
-<h4 align="center">Discord Selfbot</h4>
 
-<p align="center">
+
+<p align="left">
   <a href="https://discord.gg/SbucxwJSuA">
     <img src="https://discordapp.com/api/guilds/1065340995136389212/widget.png?style=shield" alt="Discord Server">
   </a></p>
