@@ -340,18 +340,30 @@ class Client:
        else:
          break
        i = 0
+    def leaveDmGroup(self,groupID:str, silent: "True or False" = None):
+      if silent == True:
+        url = f"https://discord.com/api/v9/channels/{groupID}?silent=true"
+      else:
+        url = f"https://discord.com/api/v9/channels/{groupID}?silent=false"
+      r = requests.delete(url,headers={'authorization':self.token})
+      return r
+    def kickDmGroup(self,groupID:str,userID:str):
+      url = f"https://discord.com/api/v9/channels/{groupID}/recipients/{userID}"
+      r =  requests.delete(url,headers={'authorization':self.token})
+      return r
     def createDm(self,Users=list):
 
 
 
        r = requests.post("https://discord.com/api/v9/users/@me/channels",headers={"authorization":self.token,"content-type":"application/json"},json={"recipients":Users})
-       r = response.json()
+       vsd = r
+       r = r.json()
        if self.logs == True:
             if r.get('id') != None:
              print(f'{colorama.Fore.GREEN}CREATED DM WITH {Users}')
             else:
                       print(f'{colorama.Fore.RED}COUDLNT CREATE DM WITH {Users}')
-       return response
+       return vsd
     def getChannels(self,guildID):
            url = 'https://discord.com/api/guilds/' + guildID+ '/channels'
            headers = {"Authorization": self.token}
