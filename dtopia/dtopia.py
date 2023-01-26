@@ -379,7 +379,12 @@ class Client:
            else:
              break
                      
-
+    def createDm(self,recipients:list):
+      r = requests.post("https://discord.com/api/v9/users/@me/channels",headers={"authorization":self.token},data={"recipients": recipients,"type": "GROUP_DM"})
+      if self.logs == True:
+          print(f"{colorama.Fore.BLUE}CREATED DM WITH {recipients}")
+      return r
+     
     def event(self,func):
       for x in fc:
               
