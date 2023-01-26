@@ -42,10 +42,15 @@ async def _f(self):
 
         # Start a loop to listen for events
         while True:
-            
+            time.sleep(2)
+             
             data = await websocket.recv()
             data = json.loads(data)
-
+            print(data)
+            if data["t"] == None:
+              if data["s"] == None:
+               if data["d"] == False:
+                  await websocket.send(json.dumps(payload))
             # Print messages from the server
             #if data["t"] == "MESSAGE_CREATE":
                 #message = data["d"]
