@@ -46,7 +46,7 @@ async def _f(self):
              
             data = await websocket.recv()
             data = json.loads(data)
-            print(data)
+            
             if data["t"] == None:
               if data["s"] == None:
                if data["d"] == False:
@@ -59,13 +59,13 @@ async def _f(self):
             if data['t'] == 'MESSAGE_CREATE':
               if 'on_message' in fc:
                 fu = fc['on_message']
-                
+
                 fu(data['d'])
               if 'on_dm' in fc:
                   guild = data.get('d').get('guild_id')
   
                   if guild is None:
-    
+
                     fu = fc['on_dm']
                     fu(data['d'])
               if str(data['d']['content']) in cmd:
