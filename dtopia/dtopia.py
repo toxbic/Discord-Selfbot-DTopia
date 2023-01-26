@@ -340,17 +340,17 @@ class Client:
        else:
          break
        i = 0
-    def createDm(self,userID):
+    def createDm(self,Users=list):
 
 
 
-       r = requests.post("https://discord.com/api/v9/users/@me/channels",headers={"authorization":self.token,"content-type":"application/json"},json={"recipients":recipients})
+       r = requests.post("https://discord.com/api/v9/users/@me/channels",headers={"authorization":self.token,"content-type":"application/json"},json={"recipients":Users})
        r = response.json()
        if self.logs == True:
             if r.get('id') != None:
-             print(f'{colorama.Fore.GREEN}CREATED DM WITH {userID}')
+             print(f'{colorama.Fore.GREEN}CREATED DM WITH {Users}')
             else:
-                      print(f'{colorama.Fore.RED}COUDLNT CREATE DM WITH {userID}')
+                      print(f'{colorama.Fore.RED}COUDLNT CREATE DM WITH {Users}')
        return response
     def getChannels(self,guildID):
            url = 'https://discord.com/api/guilds/' + guildID+ '/channels'
@@ -385,11 +385,7 @@ class Client:
            else:
              break
                      
-    def createDm(self,recipients:list):
-      r = requests.post("https://discord.com/api/v9/users/@me/channels",headers={"authorization":self.token},data={"recipients": recipients,"type": "GROUP_DM"})
-      if self.logs == True:
-          print(f"{colorama.Fore.BLUE}CREATED DM WITH {recipients}")
-      return r
+ 
      
     def event(self,func):
       for x in fc:
