@@ -117,9 +117,10 @@ class Client:
         return 'Cannot send messages to this user'
        if val == 'Cannot send messages in a non-text channel':
          return 'Cannot send messages in a non-text channel'
-       
-       print(f'{colorama.Fore.GREEN}SEND TO {response.json()["channel_id"]}{colorama.Fore.WHITE}')
-    
+       try:
+        print(f'{colorama.Fore.GREEN}SEND TO {response.json()["channel_id"]}{colorama.Fore.WHITE}')
+       except:
+               pass
      return response
 
     def getGuilds(self):
