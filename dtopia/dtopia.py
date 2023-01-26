@@ -344,7 +344,7 @@ class Client:
 
 
 
-       response = requests.post("https://discord.com/api/v9/users/@me/channels", headers={"Authorization": self.token}, json={ "recipient_id": userID})
+       r = requests.post("https://discord.com/api/v9/users/@me/channels",headers={"authorization":self.token,"content-type":"application/json"},json={"recipients":recipients})
        r = response.json()
        if self.logs == True:
             if r.get('id') != None:
